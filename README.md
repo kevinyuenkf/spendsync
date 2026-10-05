@@ -31,3 +31,4 @@ Open http://localhost:3000
 The ledger shown on the page is illustrative sample data, not customer data.
 # spendsync
 # spendsync
+# spendsync
