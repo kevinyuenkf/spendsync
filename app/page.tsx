@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState, useSyncExternalStore, type FormEvent } from "react";
-import { ArrowRight, CheckCircle2, FileUp, Languages, MapPin, ScanSearch, ShieldCheck, Sparkles, Table } from "lucide-react";
+import { ArrowRight, CheckCircle2, FileUp, Languages, Mail, MapPin, ScanSearch, ShieldCheck, Sparkles, Table } from "lucide-react";
 import { HeroVisual } from "@/components/hero-visual";
 import { COPY, DEFAULT_LOCALE, LOCALES, LOCALE_LABEL, type Locale } from "@/lib/i18n";
 
 // TODO (before deploy): point the form at a real endpoint (see handleSubmit).
 const CONTACT_EMAIL = "kevinyuen.spendsync@gmail.com";
+const FOUNDER_NAME = "Kevin Yuen";
 
 const STEP_ICONS = [FileUp, ScanSearch, Table];
 
@@ -209,6 +211,46 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section id="founder" className="mx-auto max-w-6xl scroll-mt-8 px-5 pb-20">
+        <div className="flex flex-col gap-8 rounded-3xl border border-slate-200 p-7 sm:p-10 md:flex-row md:items-start md:gap-12">
+          <div className="flex shrink-0 items-center gap-4 md:w-56 md:flex-col md:items-start">
+            <Image
+              src="/founder.jpg"
+              alt={FOUNDER_NAME}
+              width={160}
+              height={160}
+              className="h-24 w-24 rounded-2xl object-cover ring-1 ring-slate-200 md:h-40 md:w-40"
+            />
+            <div>
+              <p className="text-lg font-semibold">{FOUNDER_NAME}</p>
+              <p className="text-sm text-slate-500">
+                {t.founder.role} · SpendSync
+              </p>
+            </div>
+          </div>
+
+          <div className="min-w-0">
+            <p className="text-sm font-semibold uppercase tracking-widest text-blue-700">{t.founder.eyebrow}</p>
+            <h2 className="mt-3 text-balance text-2xl font-bold tracking-tight sm:text-3xl">{t.founder.title}</h2>
+            <div className="mt-5 space-y-4">
+              {t.founder.bio.map((paragraph) => (
+                <p key={paragraph} className="max-w-2xl leading-relaxed text-slate-600">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 underline-offset-4 hover:underline"
+            >
+              <Mail aria-hidden className="h-4 w-4" />
+              {t.founder.contact}
+            </a>
+          </div>
         </div>
       </section>
 

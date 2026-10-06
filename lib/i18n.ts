@@ -19,6 +19,7 @@ export type Copy = {
     title: string; body: string; label: string; placeholder: string; button: string;
     hint: string; sent: string; emailSubject: string; emailBody: string;
   };
+  founder: { eyebrow: string; title: string; role: string; bio: string[]; contact: string };
   footer: { place: string };
 };
 
@@ -66,6 +67,17 @@ export const COPY: Record<Locale, Copy> = {
       emailSubject: "SpendSync free trial request",
       emailBody: "Please contact me about a free trial.\n\nWork email: ",
     },
+    founder: {
+      eyebrow: "Who is behind this",
+      title: "Built by someone who has done the reconciliation by hand",
+      role: "Founder",
+      bio: [
+        "I'm Kevin. My background is in bank settlement operations, QA and UAT testing, and web development, and I studied Mathematics and Computer Science at HKUST.",
+        "Matching payments to records and chasing missing paperwork is work I know first-hand. SpendSync is my attempt to take that load off small accounting teams.",
+        "I run SpendSync myself, so when you write in, you are talking to the person who processes your files.",
+      ],
+      contact: "Contact Kevin",
+    },
     footer: { place: "Hong Kong" },
   },
   "zh-HK": {
@@ -111,6 +123,17 @@ export const COPY: Record<Locale, Copy> = {
       emailSubject: "SpendSync 免費試用申請",
       emailBody: "請就免費試用聯絡我。\n\n工作電郵:",
     },
+    founder: {
+      eyebrow: "創辦人",
+      title: "由親手做過對帳的人開發",
+      role: "創辦人",
+      bio: [
+        "我是 Kevin,具銀行結算營運、QA 及 UAT 測試和網頁開發的背景,畢業於香港科技大學,主修數學及計算機科學。",
+        "核對款項與記錄、追回欠缺的文件,是我親身做過的工作。SpendSync 是我為小型會計團隊減輕這類工作的嘗試。",
+        "SpendSync 由我一人營運,所以你來信時,對話的就是處理你文件的人。",
+      ],
+      contact: "聯絡 Kevin",
+    },
     footer: { place: "香港" },
   },
   "zh-CN": {
@@ -155,6 +178,17 @@ export const COPY: Record<Locale, Copy> = {
       sent: "你的邮件程序应已打开,请发送该封邮件以完成申请。",
       emailSubject: "SpendSync 免费试用申请",
       emailBody: "请就免费试用联系我。\n\n工作邮箱:",
+    },
+    founder: {
+      eyebrow: "创始人",
+      title: "由亲手做过对账的人开发",
+      role: "创始人",
+      bio: [
+        "我是 Kevin,具有银行结算运营、QA 及 UAT 测试和网页开发的背景,毕业于香港科技大学,主修数学及计算机科学。",
+        "核对款项与记录、追回缺失的文件,是我亲身做过的工作。SpendSync 是我为小型会计团队减轻这类工作的尝试。",
+        "SpendSync 由我一人运营,所以你来信时,对话的就是处理你文件的人。",
+      ],
+      contact: "联系 Kevin",
     },
     footer: { place: "香港" },
   },
