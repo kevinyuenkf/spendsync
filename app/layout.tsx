@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SpendSync｜月結單和收據,24 小時內變成 Xero 帳目",
+  title: "SpendSync｜Xero-ready books from client statements and receipts",
   description:
-    "為香港會計師行而設:把客戶交來的月結單和收據整理成可匯入 Xero 的帳目,並列出欠收據的支出。",
+    "For Hong Kong accounting firms: client statements and receipts turned into Xero-ready books in 24 hours. 為香港會計師行而設。",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
         />
       </head>
       <body className="antialiased">{children}</body>

@@ -9,7 +9,7 @@
   --color-line: #dfe9e5;
   --color-flag: #b86a00;
   --color-flag-soft: #fff3df;
-  --font-sans: "Plus Jakarta Sans", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Noto Sans TC", "Noto Sans SC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
 
